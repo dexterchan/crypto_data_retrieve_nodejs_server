@@ -11,7 +11,7 @@ var publicFolder=__dirname+'/public/';
 app.use(bodyParser.json({ type: 'application/json' }));
 app.use(express.static(publicFolder));
 
-var srcPath="/Users/dexter/temp/cryptoData/";
+var srcPath="/mnt/download/cryptoData/";
 
 
 app.get('/mkt/:ccy', function (req, res) {
