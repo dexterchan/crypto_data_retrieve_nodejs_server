@@ -9,7 +9,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch server",
-            "program": "${workspaceFolder}/app.js"
+            "program": "${workspaceFolder}/app.js",
+            "args":["--p=/Users/dexter/temp/cryptoData"]
         }
     ]
 }
