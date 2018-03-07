@@ -24,6 +24,16 @@ app.get('/mkt/:ccy', function (req, res) {
 
  });
 
+ app.get('/tweet/:ccy', function (req, res) {
+    var filename="live.tweet."+req.params.ccy+".csv";
+    var tempFile=publicFolder+filename+uuidv1()+".gz";
+    // Compress the file input.txt to input.txt.gz
+    fs.createReadStream(srcPath+filename)
+    .pipe(zlib.createGzip()).pipe(res);
+   // .pipe(fs.createWriteStream(tempFile))
+
+ });
+
 
  var server = app.listen(8082,  function () {
     var host = server.address().address;
